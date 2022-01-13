@@ -1,5 +1,5 @@
 <template>
-  <h1>Well Hello There {{formattedName}}!</h1>
+  <h1><slot>Well Hello There</slot> {{formattedName}}!</h1>
   <input type="text" v-model="name" />
 
   <my-banner-child :name="formattedName"></my-banner-child>
