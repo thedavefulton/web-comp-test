@@ -1,8 +1,8 @@
-import {createPinia} from "pinia";
-import {useUserStore} from "./useUserStore";
+import { createPinia } from "pinia";
+import { sharedStore } from "./SharedStore";
 
 const pinia = createPinia();
 
-export function userStore() {
-    return useUserStore(pinia);
+export function useSharedStore() {
+  return sharedStore(pinia);
 }
