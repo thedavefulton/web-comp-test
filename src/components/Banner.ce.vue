@@ -7,12 +7,23 @@
 
 <script setup lang="ts">
 import {computed, ref} from "vue";
+import {userStore as useUserStore} from "../stores";
 
 const props = defineProps({
   upper: Boolean
 })
 
-const name = ref('Name')
+const userStore = useUserStore();
+console.log(userStore.name)
+
+const name = computed({
+  get: () => userStore.name,
+  set: (val) => {
+    userStore.name = val;
+  }
+})
+
+
 
 const formattedName = computed(() => props.upper ? name.value.toLocaleUpperCase() : name.value)
 </script>
