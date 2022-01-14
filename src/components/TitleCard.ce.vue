@@ -10,5 +10,7 @@
 <style>
 .title {
   margin-bottom: var(--size-3);
+  font-size: var(--size-4);
+  text-align: center;
 }
 </style>
