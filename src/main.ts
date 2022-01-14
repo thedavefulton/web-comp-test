@@ -2,11 +2,11 @@ import { defineCustomElement } from "vue";
 import _kebabCase from "lodash/kebabCase";
 
 const components = [
-  "Banner",
-  "BannerChild",
-  "Unrelated",
   "BaseCard",
   "TitleCard",
+  "FirstCard",
+  "SecondCard",
+  "ThirdCard",
 ];
 export async function register() {
   for (const compName of components) {
