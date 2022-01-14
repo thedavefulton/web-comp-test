@@ -16,12 +16,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <style>
-      h2 {
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: var(--size-3);
+      }
+      h3 {
         color: var(--gray-0);
         margin-bottom: var(--size-5);
       }
       p {
-        font-size: var(--font-size-5);
+        font-size: var(--font-size-4);
       }
       button {
         margin-top: var(--size-5);
@@ -33,23 +38,25 @@
     </style>
   </head>
   <body>
-    <ark-banner upper>Welcome to the suck,</ark-banner>
-
-    <ark-unrelated></ark-unrelated>
+    <ark-first-card></ark-first-card>
+    <ark-second-card></ark-second-card>
+    <ark-third-card></ark-third-card>
 
     <ark-base-card>
-      <h2>I'm Vanilla-ish</h2>
-      <p>That button is just dumb jQuery toggling an HTML element 🤷‍</p>
+      <h3>I'm an Old Dumb Card 🛠️</h3>
+      <p>That button is just jQuery toggling an HTML element 🤷‍</p>
+      <p>Go look for 'ark-first-card' and look for the 'upper' attribute 🔍</p>
       <button>Toggle "upper"</button>
     </ark-base-card>
+
     <script type="module" src="/src/main.ts"></script>
     <script>
       $("button").click(() => {
-        const upper = $("ark-banner").attr("upper");
+        const upper = $("ark-first-card").attr("upper");
         if (typeof upper === "string") {
-          $("ark-banner").removeAttr("upper");
+          $("ark-first-card").removeAttr("upper");
         } else {
-          $("ark-banner").attr("upper", "");
+          $("ark-first-card").attr("upper", "");
         }
       });
     </script>
