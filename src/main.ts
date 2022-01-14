@@ -7,6 +7,7 @@ const components = [
   "FirstCard",
   "SecondCard",
   "ThirdCard",
+  "PropDemoCard",
 ];
 export async function register() {
   for (const compName of components) {
